@@ -8,7 +8,9 @@ A Windows desktop app for managing WireGuard peers across **multiple** VPS serve
 
 No agents to install on your servers beyond what the app sets up for you — just SSH access. WireGuard itself, traffic monitoring, and DNS logging can all be installed with one click from inside the app.
 
-![Main window](docs/screenshot-main.png)
+<p align="center">
+  <img src="screenshot-main.png" width="802" alt="wg-easy Screenshot" />
+</p>
 
 ## Table of contents
 
