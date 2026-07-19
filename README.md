@@ -80,7 +80,7 @@ and run it. Nothing else to install.
 ### Option B: Run from source
 
 ```bash
-git clone https://github.com/<your-username>/wg-fleet.git
+git clone https://github.com/OTFRenji/wg-fleet.git
 cd wg-fleet
 pip install -r requirements.txt
 python wg_fleet.py
