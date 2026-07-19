@@ -1,0 +1,28 @@
+# Secrets / user data -- never commit these
+servers_store.json
+servers.json
+servers.json.bak
+.servers.key
+configs/
+wg_fleet_error.log
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+env/
+*.egg-info/
+
+# PyInstaller build output
+build/
+dist/
+*.spec
+
+# Editor / OS cruft
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db

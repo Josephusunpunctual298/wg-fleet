@@ -1,0 +1,45 @@
+name: Build Windows executable
+
+# Builds a standalone WG Fleet.exe and attaches it to a GitHub Release
+# whenever a version tag (e.g. v1.0.0) is pushed. Users who don't have
+# Python installed can then just download the .exe from the Releases page.
+
+"on":
+  push:
+    tags:
+      - "v*"
+  workflow_dispatch: {}
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+          pip install pyinstaller
+
+      - name: Build executable
+        run: pyinstaller --onefile --windowed --name "WG Fleet" wg_fleet.py
+
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: WG-Fleet-Windows
+          path: dist/WG Fleet.exe
+
+      - name: Attach to GitHub Release
+        if: startsWith(github.ref, 'refs/tags/')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: dist/WG Fleet.exe
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
