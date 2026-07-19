@@ -1,9 +1,8 @@
 name: Build Windows executable
 
 "on":
-  push:
-    tags:
-      - "v*"
+  release:
+    types: [published]
   workflow_dispatch: {}
 
 jobs:
@@ -33,7 +32,6 @@ jobs:
           path: dist/WG Fleet.exe
 
       - name: Attach to GitHub Release
-        if: startsWith(github.ref, 'refs/tags/')
         uses: softprops/action-gh-release@v2
         with:
           files: dist/WG Fleet.exe
