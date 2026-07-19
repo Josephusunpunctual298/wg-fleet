@@ -1,5 +1,8 @@
 name: Build Windows executable
 
+permissions:
+  contents: write
+
 "on":
   release:
     types: [published]
